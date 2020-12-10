@@ -28,3 +28,65 @@ font-family: monospace;
       background-position: 100% 50%;
     }
   }
+
+  #message {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #message div {
+    padding: 20px;
+    border: 1px #fff solid;
+    border-radius: 10px;
+    background: #000;
+    opacity: 0.7;
+    margin: 5px;
+    background: #17a2b8;
+  
+}  
+  
+  #message span {
+    display: block;
+    font-size: 25px;
+  }
+  
+  @media (max-width: 650px) {
+    #message {
+      font-size: 30px;
+      flex-direction: column;
+    }
+  
+    #message div {
+      display: none;
+    }
+  
+    #message div:first-child {
+      display: block;
+      width: 80%;
+      padding: 10px;
+    }
+  }
+  
+  
+  @media (max-height: 600px) {
+    img {
+      width: 20%;
+    }
+  
+    p {
+      display: none;
+    }
+  }
+  
+  @media (max-height: 400px) {
+     img {
+      padding-bottom: 30px;
+    }
+    
+    h1 {
+      display: none;
+    }
+  }
