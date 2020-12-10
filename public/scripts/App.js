@@ -1,9 +1,8 @@
 var anime = document.getElementById('anime'),
 message = document.getElementById('message'),
-christmasDate = new Date(`Dec 25, ${new Date().getFullYear()} 00:00:00`).getTime();
-christmasOver = new Date(`Dec 26 ${new Date().getFullYear()} 00:00:00`).getTime()
-
-const intvl = setInterval(() => {
+christmasDate = new Date(`Dec 25, ${new Date().getFullYear()} 00:00:00`).getTime(),
+christmasOver = new Date(`Dec 26 ${new Date().getFullYear()} 00:00:00`).getTime();
+setInterval(() => {
     // Get todays date and time (ms)
     const now = new Date().getTime()   
     // Distance from now and the launch date (ms)
@@ -25,11 +24,11 @@ const intvl = setInterval(() => {
     if(now>christmasOver){
 christmasDate = new Date(`Dec 24, ${new Date().getFullYear()+1} 24:00:00`).getTime();
 christmasOver = new Date(`Dec 25 ${new Date().getFullYear()+1} 24:00:00`).getTime();
-    }
+  }
     else if(now<christmasOver&&now>christmasDate){
     document.title = 'Merry Christmas !!'
     anime.innerHTML = 'Merry Christmas'
     message.innerHTML = ""
-  }
-  }, 1000);
+}
+}, 1000);
   
