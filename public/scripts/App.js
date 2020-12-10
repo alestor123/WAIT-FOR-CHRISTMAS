@@ -5,7 +5,7 @@ christmasOver = new Date(`Dec 26 ${new Date().getFullYear()} 00:00:00`).getTime(
 
 const intvl = setInterval(() => {
     // Get todays date and time (ms)
-    const now = new Date(`Jan 1 ${new Date().getFullYear()} 00:00:00`).getTime()   
+    const now = new Date().getTime()   
     // Distance from now and the launch date (ms)
     const distance = christmasDate - now;  
     // Time calculation
