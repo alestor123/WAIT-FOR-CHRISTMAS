@@ -1,0 +1,10 @@
+body{
+font-family: monospace;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: url('https://i.ibb.co/1sQXJ4z/page-bg.png') no-repeat center center/cover;
+    height: 100vh;
+}
