@@ -1,13 +1,14 @@
 var anime = document.getElementById('anime'),
 message = document.getElementById('message'),
-christmasDate = new Date(`Dec 24, ${new Date().getFullYear()} 24:00:00`).getTime();
-christmasOver = new Date(`Dec 25 ${new Date().getFullYear()} 24:00:00`).getTime();
+christmasDate = new Date(`Dec 25, ${new Date().getFullYear()} 00:00:00`).getTime();
+christmasOver = new Date(`Dec 26 ${new Date().getFullYear()} 00:00:00`).getTime()
 
 const intvl = setInterval(() => {
     // Get todays date and time (ms)
-      const now = new Date().getTime();
+    const now = new Date(`Jan 1 ${new Date().getFullYear()} 00:00:00`).getTime()   
+  
     // Distance from now and the launch date (ms)
-    const distance = christmasDate - now
+    const distance = christmasDate - now;
   
     // Time calculation
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -25,18 +26,13 @@ const intvl = setInterval(() => {
     <div>${seconds}<span>Seconds</span></div>
     `;
   
-    // If launch date is reached
-    if (distance < 0) {
-      // Stop message
-      // Style and output text
-      anime.innerHTML = 'Merry Christmas'
-    }
     if(now>christmasOver){
-      nextYear = new Date().getFullYear() + 1
-christmasDate = new Date(`Dec 10, ${nextYear} 24:00:00`).getTime();
-christmasOver = new Date(`Dec 11 ${nextYear} 24:00:00`).getTime();
-anime.innerHTML = 'Christmas is over'
-
+christmasDate = new Date(`Dec 24, ${new Date().getFullYear()+1} 24:00:00`).getTime();
+christmasOver = new Date(`Dec 25 ${new Date().getFullYear()+1} 24:00:00`).getTime();
     }
-}, 1000);
+    else if(now<christmasOver&&now>christmasDate){
+    anime.innerHTML = 'Merry Christmas'
+    message.innerHTML = ""
+  }
+  }, 1000);
   
