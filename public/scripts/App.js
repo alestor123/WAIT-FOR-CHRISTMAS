@@ -27,6 +27,7 @@ christmasDate = new Date(`Dec 24, ${new Date().getFullYear()+1} 24:00:00`).getTi
 christmasOver = new Date(`Dec 25 ${new Date().getFullYear()+1} 24:00:00`).getTime();
     }
     else if(now<christmasOver&&now>christmasDate){
+    document.title = 'Merry Christmas !!'
     anime.innerHTML = 'Merry Christmas'
     message.innerHTML = ""
   }
